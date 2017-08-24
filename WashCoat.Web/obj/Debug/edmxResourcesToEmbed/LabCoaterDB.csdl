@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Coater_LabModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="LabData1">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="BatchID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LabLogNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Solids500C" Type="Double" Nullable="false" />
+    <Property Name="Pt" Type="Double" Nullable="false" />
+    <Property Name="Pd" Type="Double" Nullable="false" />
+    <Property Name="Rh" Type="Double" Nullable="false" />
+    <Property Name="Zr" Type="Double" Nullable="false" />
+    <Property Name="Ce" Type="Double" Nullable="false" />
+    <Property Name="Ni" Type="Double" Nullable="false" />
+    <Property Name="Ba" Type="Double" Nullable="false" />
+    <Property Name="La" Type="Double" Nullable="false" />
+    <Property Name="Ir" Type="Double" Nullable="false" />
+    <Property Name="pH" Type="Double" Nullable="false" />
+    <Property Name="Y" Type="Double" Nullable="false" />
+    <Property Name="Nd" Type="Double" Nullable="false" />
+    <Property Name="Pr" Type="Double" Nullable="false" />
+    <Property Name="Hf" Type="Double" Nullable="false" />
+    <Property Name="Temperature" Type="Double" Nullable="false" />
+    <Property Name="Viscosity_Fresh" Type="Double" Nullable="false" />
+    <Property Name="Viscosity_Aged" Type="Double" Nullable="false" />
+    <Property Name="Arizona_Solids" Type="Double" Nullable="false" />
+    <Property Name="WashCoatLoading" Type="Double" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="Coater_LabEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="LabData1" EntityType="Self.LabData1" />
+  </EntityContainer>
+</Schema>

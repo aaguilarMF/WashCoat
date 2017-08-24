@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -17,21 +19,18 @@ namespace WashCoat.Web.Controllers
             return View();
         }
 
-       /* [HttpGet]
+        [HttpGet]
         [AllowAnonymous]
-        public string GetSerializedStudentVMS()
+        public string GetWashCoatsData()
         {
-            var students = new[]
-             {
-                    new StudentVM {RollNo = 1, StudentName = "Jamal Uddin", Class="One", ClassTeacher="Mr. Anowar Hossain"},
-                    new StudentVM {RollNo = 5, StudentName = "Kamal Hossain", Class="Two", ClassTeacher="Mr. Shahana Begum"},
-                    new StudentVM {RollNo = 10, StudentName = "Jahid Hasan", Class="Three", ClassTeacher="Mr. Lutfor Rahman"},
-                };
+            var context = new Coater_LabEntities();
+            var labData = context.LabData1.ToList();
+     
 
             //Used to make property name as camel case
             var settings = new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() };
 
-            return JsonConvert.SerializeObject(students, Formatting.None, settings); //Returns students list as JSON
-        }*/
+            return JsonConvert.SerializeObject(labData, Formatting.None, settings); //Returns students list as JSON
+        }
     }
 }

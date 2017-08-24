@@ -19,7 +19,7 @@
         
         );
     };
-    $scope.gridOptions = { data: washCoatData };
+    $scope.gridOptions = { data: 'washCoatData' };
     $scope.washCoatDataPopulate();
 }
 

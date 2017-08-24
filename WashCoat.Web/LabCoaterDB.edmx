@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Coater_LabModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="LabData1">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="BatchID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="LabLogNumber" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Solids500C" Type="float" Nullable="false" />
+          <Property Name="Pt" Type="float" Nullable="false" />
+          <Property Name="Pd" Type="float" Nullable="false" />
+          <Property Name="Rh" Type="float" Nullable="false" />
+          <Property Name="Zr" Type="float" Nullable="false" />
+          <Property Name="Ce" Type="float" Nullable="false" />
+          <Property Name="Ni" Type="float" Nullable="false" />
+          <Property Name="Ba" Type="float" Nullable="false" />
+          <Property Name="La" Type="float" Nullable="false" />
+          <Property Name="Ir" Type="float" Nullable="false" />
+          <Property Name="pH" Type="float" Nullable="false" />
+          <Property Name="Y" Type="float" Nullable="false" />
+          <Property Name="Nd" Type="float" Nullable="false" />
+          <Property Name="Pr" Type="float" Nullable="false" />
+          <Property Name="Hf" Type="float" Nullable="false" />
+          <Property Name="Temperature" Type="float" Nullable="false" />
+          <Property Name="Viscosity_Fresh" Type="float" Nullable="false" />
+          <Property Name="Viscosity_Aged" Type="float" Nullable="false" />
+          <Property Name="Arizona_Solids" Type="float" Nullable="false" />
+          <Property Name="WashCoatLoading" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="Coater_LabModelStoreContainer">
+          <EntitySet Name="LabData1" EntityType="Self.LabData1" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Coater_LabModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="LabData1">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="BatchID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="LabLogNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Solids500C" Type="Double" Nullable="false" />
+          <Property Name="Pt" Type="Double" Nullable="false" />
+          <Property Name="Pd" Type="Double" Nullable="false" />
+          <Property Name="Rh" Type="Double" Nullable="false" />
+          <Property Name="Zr" Type="Double" Nullable="false" />
+          <Property Name="Ce" Type="Double" Nullable="false" />
+          <Property Name="Ni" Type="Double" Nullable="false" />
+          <Property Name="Ba" Type="Double" Nullable="false" />
+          <Property Name="La" Type="Double" Nullable="false" />
+          <Property Name="Ir" Type="Double" Nullable="false" />
+          <Property Name="pH" Type="Double" Nullable="false" />
+          <Property Name="Y" Type="Double" Nullable="false" />
+          <Property Name="Nd" Type="Double" Nullable="false" />
+          <Property Name="Pr" Type="Double" Nullable="false" />
+          <Property Name="Hf" Type="Double" Nullable="false" />
+          <Property Name="Temperature" Type="Double" Nullable="false" />
+          <Property Name="Viscosity_Fresh" Type="Double" Nullable="false" />
+          <Property Name="Viscosity_Aged" Type="Double" Nullable="false" />
+          <Property Name="Arizona_Solids" Type="Double" Nullable="false" />
+          <Property Name="WashCoatLoading" Type="Double" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="Coater_LabEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="LabData1" EntityType="Self.LabData1" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Coater_LabModelStoreContainer" CdmEntityContainer="Coater_LabEntities">
+          <EntitySetMapping Name="LabData1">
+            <EntityTypeMapping TypeName="Coater_LabModel.LabData1">
+              <MappingFragment StoreEntitySet="LabData1">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="BatchID" ColumnName="BatchID" />
+                <ScalarProperty Name="LabLogNumber" ColumnName="LabLogNumber" />
+                <ScalarProperty Name="Solids500C" ColumnName="Solids500C" />
+                <ScalarProperty Name="Pt" ColumnName="Pt" />
+                <ScalarProperty Name="Pd" ColumnName="Pd" />
+                <ScalarProperty Name="Rh" ColumnName="Rh" />
+                <ScalarProperty Name="Zr" ColumnName="Zr" />
+                <ScalarProperty Name="Ce" ColumnName="Ce" />
+                <ScalarProperty Name="Ni" ColumnName="Ni" />
+                <ScalarProperty Name="Ba" ColumnName="Ba" />
+                <ScalarProperty Name="La" ColumnName="La" />
+                <ScalarProperty Name="Ir" ColumnName="Ir" />
+                <ScalarProperty Name="pH" ColumnName="pH" />
+                <ScalarProperty Name="Y" ColumnName="Y" />
+                <ScalarProperty Name="Nd" ColumnName="Nd" />
+                <ScalarProperty Name="Pr" ColumnName="Pr" />
+                <ScalarProperty Name="Hf" ColumnName="Hf" />
+                <ScalarProperty Name="Temperature" ColumnName="Temperature" />
+                <ScalarProperty Name="Viscosity_Fresh" ColumnName="Viscosity_Fresh" />
+                <ScalarProperty Name="Viscosity_Aged" ColumnName="Viscosity_Aged" />
+                <ScalarProperty Name="Arizona_Solids" ColumnName="Arizona_Solids" />
+                <ScalarProperty Name="WashCoatLoading" ColumnName="WashCoatLoading" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
