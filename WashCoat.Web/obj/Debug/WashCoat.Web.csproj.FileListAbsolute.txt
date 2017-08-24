@@ -83,6 +83,6 @@ c:\users\aaguilar\documents\visual studio 2015\Projects\WashCoat.Web\WashCoat.We
 c:\users\aaguilar\documents\visual studio 2015\Projects\WashCoat.Web\WashCoat.Web\bin\Microsoft.Owin.Security.Google.xml
 c:\users\aaguilar\documents\visual studio 2015\Projects\WashCoat.Web\WashCoat.Web\bin\Microsoft.Owin.Security.Twitter.xml
 c:\users\aaguilar\documents\visual studio 2015\Projects\WashCoat.Web\WashCoat.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-c:\users\aaguilar\documents\visual studio 2015\Projects\WashCoat.Web\WashCoat.Web\obj\Debug\WashCoat.Web.csprojResolveAssemblyReference.cache
 c:\users\aaguilar\documents\visual studio 2015\Projects\WashCoat.Web\WashCoat.Web\obj\Debug\WashCoat.Web.dll
 c:\users\aaguilar\documents\visual studio 2015\Projects\WashCoat.Web\WashCoat.Web\obj\Debug\WashCoat.Web.pdb
+c:\users\aaguilar\documents\visual studio 2015\Projects\WashCoat.Web\WashCoat.Web\obj\Debug\WashCoat.Web.csprojResolveAssemblyReference.cache
