@@ -1,16 +1,18 @@
-﻿var WashCoatWebApp = angular.module('WashCoatWebApp', ['ngRoute', 'ui.grid']);//  'ngGrid']);
+﻿var WashCoatWebApp = angular.module('WashCoatWebApp', ['ngRoute', 'ui.grid', 'ui.grid.pinning']);//  'ngGrid']);
 
 // controllaas
 WashCoatWebApp.controller('LandingPageController', LandingPageController);
 WashCoatWebApp.controller('LoginController', LoginController);
 WashCoatWebApp.controller('RegisterController', RegisterController);
 WashCoatWebApp.controller('WashCoatController', WashCoatController);
+WashCoatWebApp.controller('AddWashCoatController', AddWashCoatController);
 
 //factoraaas
 WashCoatWebApp.factory('AuthHttpResponseInterceptor', AuthHttpResponseInterceptor);
 WashCoatWebApp.factory('LoginFactory', LoginFactory);
 WashCoatWebApp.factory('RegistrationFactory', RegistrationFactory);
 WashCoatWebApp.factory('WashCoatFactory', WashCoatFactory);
+WashCoatWebApp.factory('AddWashCoatFactory', AddWashCoatFactory);
 
 var configFunction = function ($routeProvider, $httpProvider) {
 

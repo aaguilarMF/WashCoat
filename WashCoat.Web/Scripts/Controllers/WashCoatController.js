@@ -27,7 +27,8 @@
                 name: 'delete',
                 displayName: '',
                 cellTemplate: '<button  type="button" class="btn-small" ng-click="grid.appScope.deleteEntry(row.entity)" >Delete</button> ',
-                width: '50'
+                width: '80',
+                pinnedRight:true
             });
 
             //data[0].foreach(function (element) {
@@ -43,7 +44,7 @@
     $scope.gridOptions = {
         data: null // 'washCoatData'
         , columnDefs: null// $scope.washCoatDataColumnDefs
-        , enableColumnResize: true
+        , enableColumnResizing: true
     };
     $scope.deleteEntry = function (row) {
         var result = WashCoatFactoryRef.deleteWashCoatEntry(row.id);

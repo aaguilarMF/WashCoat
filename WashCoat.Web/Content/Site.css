@@ -11,6 +11,11 @@
 .ui-grid-header-cell-wrapper{
 height: 30px; 
 }
+
+.even-modal-row{
+    background-color:lavender;
+}
+
 /*body {
     padding-top: 50px;
     padding-bottom: 20px;

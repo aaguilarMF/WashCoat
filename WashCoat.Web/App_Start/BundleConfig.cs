@@ -23,6 +23,7 @@ namespace WashCoat.Web
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));*/
             bundles.Add(new ScriptBundle("~/bundles/WashCoatWebApp")
+            .Include("~/Scripts/Models.js")
             .IncludeDirectory("~/Scripts/Controllers", "*.js")
             .IncludeDirectory("~/Scripts/Factories", "*.js")
             .Include("~/Scripts/WashCoatWebApp.js"));
@@ -42,6 +43,7 @@ namespace WashCoat.Web
                "~/Scripts/angular.min.js")
                .Include("~/Scripts/angular-route.min.js")
                .Include("~/Scripts/ui-grid.min.js")
+               .Include("~/Scripts/jquery-3.1.1.min.js","~/Scripts/bootstrap.min.js")
                );
 
             bundles.Add(new ScriptBundle("~/bundles/JQueryStuff")
@@ -51,7 +53,8 @@ namespace WashCoat.Web
                 );
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      //"~/Content/bootstrap.css",
+                      "~/Content/bootstrap-theme.min.css",
+                      "~/Content/bootstrap.min.css",
                       //"~/Content/ui-grid.css",
                       "~/Content/ui-grid.min.css",
                       //"~/Content/ng-grid.min.css",
