@@ -281,6 +281,9 @@
     <Content Include="LabCoaterDB.edmx.diagram">
       <DependentUpon>LabCoaterDB.edmx</DependentUpon>
     </Content>
+    <Content Include="Content\ui-grid.woff" />
+    <Content Include="Content\ui-grid.ttf" />
+    <Content Include="Content\ui-grid.eot" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
     <Content Include="Scripts\Factories\WashCoatFactory.js" />
     <Content Include="Scripts\jquery-3.1.1.js" />
@@ -289,6 +292,8 @@
     <Content Include="Scripts\jquery-3.1.1.slim.min.js" />
     <Content Include="Scripts\ng-grid.js" />
     <Content Include="Scripts\ng-grid.min.js" />
+    <Content Include="Scripts\ui-grid.js" />
+    <Content Include="Scripts\ui-grid.min.js" />
     <Content Include="Scripts\WashCoatWebApp.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
@@ -314,9 +319,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
-    <Content Include="Content\ui-grid.woff" />
-    <Content Include="Content\ui-grid.ttf" />
-    <Content Include="Content\ui-grid.eot" />
     <None Include="Project_Readme.html" />
     <Content Include="Views\RoutesDemo\One.cshtml" />
     <Content Include="Views\RoutesDemo\Two.cshtml" />

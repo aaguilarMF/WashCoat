@@ -38,6 +38,12 @@ namespace WashCoat.Web
                 .Include("~/Scripts/ng-grid.min.js")
                 );
 
+            bundles.Add(new ScriptBundle("~/bundles/AngularStuffUIGrid").Include(
+               "~/Scripts/angular.min.js")
+               .Include("~/Scripts/angular-route.min.js")
+               .Include("~/Scripts/ui-grid.min.js")
+               );
+
             bundles.Add(new ScriptBundle("~/bundles/JQueryStuff")
                 .Include("~/Scripts/jquery-1.9.1.js",
                 "~/Scripts/jquery-1.9.1.min.js") //...
@@ -47,8 +53,8 @@ namespace WashCoat.Web
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       //"~/Content/bootstrap.css",
                       //"~/Content/ui-grid.css",
-                      //"~/Content/ui-grid.min.css",
-                      "~/Content/ng-grid.min.css",
+                      "~/Content/ui-grid.min.css",
+                      //"~/Content/ng-grid.min.css",
                       "~/Content/site.css"));
         }
     }

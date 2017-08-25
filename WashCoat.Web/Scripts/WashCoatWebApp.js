@@ -1,4 +1,4 @@
-﻿var WashCoatWebApp = angular.module('WashCoatWebApp', ['ngRoute',  'ngGrid']);
+﻿var WashCoatWebApp = angular.module('WashCoatWebApp', ['ngRoute', 'ui.grid']);//  'ngGrid']);
 
 // controllaas
 WashCoatWebApp.controller('LandingPageController', LandingPageController);

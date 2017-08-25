@@ -1,32 +1,31 @@
 ﻿var WashCoatFactory = function ($http, $q) {
-    return function () {
-
+    //return function () {
+    var getWashCoatData = function () {
         var deferredObject = $q.defer();
 
         $http.get(
             '/WashCoat/GetWashCoatsData'
         ).then(function (response) {
             deferredObject.resolve(response.data);
-            /*if (data == "True") {
-                deferredObject.resolve({ success: true });
-            } else {
-                deferredObject.resolve({ success: false });
-            }*/
         });
-        //success(function (data) {
-        //    deferredObject.resolve(data);
-        //    /*if (data == "True") {
-        //        deferredObject.resolve({ success: true });
-        //    } else {
-        //        deferredObject.resolve({ success: false });
-        //    }*/
-        //}).
-        //error(function (data) {
-        //    deferredObject.resolve({ success: false });
-        //});
-
         return deferredObject.promise;
+    };
+    var deleteWashCoatEntry = function (id) {
+        var deferredObject = $q.defer();
+
+        $http.post(
+            '/WashCoat/DeleteWashCoatEntry',
+            {id: id}
+        ).then(function (response) {
+            deferredObject.resolve(response.data);
+        });
+        return deferredObject.promise;
+    };
+    return {
+        getWashCoatData: getWashCoatData,
+        deleteWashCoatEntry: deleteWashCoatEntry
     }
+    //}
 }
 
 WashCoatFactory.$inject = ['$http', '$q'];
