@@ -76,7 +76,32 @@
 
         var result = AddWashCoatFactoryRef(addWashCoatModel);
         result.then(function (data) {
-            alert(data);
+            if (data) {
+                $scope.BatchID.val = null;
+                $scope.LabLogNumber.val = null;
+                $scope.Solids500C.val = null;
+                $scope.Pt.val = null;
+                $scope.Pd.val = null;
+                $scope.Rh.val = null;
+                $scope.Zr.val = null;
+                $scope.Ce.val = null;
+                $scope.Ni.val = null;
+                $scope.Ba.val = null;
+                $scope.La.val = null;
+                $scope.Ir.val = null;
+                $scope.pH.val = null;
+                $scope.Y.val = null;
+                $scope.Nd.val = null;
+                $scope.Pr.val = null;
+                $scope.Hf.val = null;
+                $scope.Temperature.val = null;
+                $scope.Viscosity_Fresh.val = null;
+                $scope.Viscosity_Aged.val = null;
+                $scope.Arizona_Solids.val = null;
+                $scope.WashCoatLoading.val = null;
+                $scope.$emit('resetGrid');
+                alert("Entry has been updated on grid;");
+            }
         });
 
     };

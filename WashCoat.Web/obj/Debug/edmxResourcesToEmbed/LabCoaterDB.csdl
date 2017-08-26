@@ -1,12 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="Coater_LabModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="Coater_LabEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="LabData1" EntityType="Coater_LabModel.LabData1" />
+  </EntityContainer>
   <EntityType Name="LabData1">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID" Type="Int32" Nullable="false" />
-    <Property Name="BatchID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="LabLogNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BatchID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LabLogNumber" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Solids500C" Type="Double" Nullable="false" />
     <Property Name="Pt" Type="Double" Nullable="false" />
     <Property Name="Pd" Type="Double" Nullable="false" />
@@ -28,7 +31,4 @@
     <Property Name="Arizona_Solids" Type="Double" Nullable="false" />
     <Property Name="WashCoatLoading" Type="Double" Nullable="false" />
   </EntityType>
-  <EntityContainer Name="Coater_LabEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="LabData1" EntityType="Self.LabData1" />
-  </EntityContainer>
 </Schema>

@@ -4,29 +4,29 @@
     <EntitySetMapping Name="LabData1">
       <EntityTypeMapping TypeName="Coater_LabModel.LabData1">
         <MappingFragment StoreEntitySet="LabData1">
-          <ScalarProperty Name="ID" ColumnName="ID" />
-          <ScalarProperty Name="BatchID" ColumnName="BatchID" />
-          <ScalarProperty Name="LabLogNumber" ColumnName="LabLogNumber" />
-          <ScalarProperty Name="Solids500C" ColumnName="Solids500C" />
-          <ScalarProperty Name="Pt" ColumnName="Pt" />
-          <ScalarProperty Name="Pd" ColumnName="Pd" />
-          <ScalarProperty Name="Rh" ColumnName="Rh" />
-          <ScalarProperty Name="Zr" ColumnName="Zr" />
-          <ScalarProperty Name="Ce" ColumnName="Ce" />
-          <ScalarProperty Name="Ni" ColumnName="Ni" />
-          <ScalarProperty Name="Ba" ColumnName="Ba" />
-          <ScalarProperty Name="La" ColumnName="La" />
-          <ScalarProperty Name="Ir" ColumnName="Ir" />
-          <ScalarProperty Name="pH" ColumnName="pH" />
-          <ScalarProperty Name="Y" ColumnName="Y" />
-          <ScalarProperty Name="Nd" ColumnName="Nd" />
-          <ScalarProperty Name="Pr" ColumnName="Pr" />
-          <ScalarProperty Name="Hf" ColumnName="Hf" />
-          <ScalarProperty Name="Temperature" ColumnName="Temperature" />
-          <ScalarProperty Name="Viscosity_Fresh" ColumnName="Viscosity_Fresh" />
-          <ScalarProperty Name="Viscosity_Aged" ColumnName="Viscosity_Aged" />
-          <ScalarProperty Name="Arizona_Solids" ColumnName="Arizona_Solids" />
           <ScalarProperty Name="WashCoatLoading" ColumnName="WashCoatLoading" />
+          <ScalarProperty Name="Arizona_Solids" ColumnName="Arizona_Solids" />
+          <ScalarProperty Name="Viscosity_Aged" ColumnName="Viscosity_Aged" />
+          <ScalarProperty Name="Viscosity_Fresh" ColumnName="Viscosity_Fresh" />
+          <ScalarProperty Name="Temperature" ColumnName="Temperature" />
+          <ScalarProperty Name="Hf" ColumnName="Hf" />
+          <ScalarProperty Name="Pr" ColumnName="Pr" />
+          <ScalarProperty Name="Nd" ColumnName="Nd" />
+          <ScalarProperty Name="Y" ColumnName="Y" />
+          <ScalarProperty Name="pH" ColumnName="pH" />
+          <ScalarProperty Name="Ir" ColumnName="Ir" />
+          <ScalarProperty Name="La" ColumnName="La" />
+          <ScalarProperty Name="Ba" ColumnName="Ba" />
+          <ScalarProperty Name="Ni" ColumnName="Ni" />
+          <ScalarProperty Name="Ce" ColumnName="Ce" />
+          <ScalarProperty Name="Zr" ColumnName="Zr" />
+          <ScalarProperty Name="Rh" ColumnName="Rh" />
+          <ScalarProperty Name="Pd" ColumnName="Pd" />
+          <ScalarProperty Name="Pt" ColumnName="Pt" />
+          <ScalarProperty Name="Solids500C" ColumnName="Solids500C" />
+          <ScalarProperty Name="LabLogNumber" ColumnName="LabLogNumber" />
+          <ScalarProperty Name="BatchID" ColumnName="BatchID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

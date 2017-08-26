@@ -4,7 +4,7 @@
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="BatchID" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="LabLogNumber" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="Solids500C" Type="float" Nullable="false" />
