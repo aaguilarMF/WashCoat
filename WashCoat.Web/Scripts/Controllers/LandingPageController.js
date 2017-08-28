@@ -1,7 +1,7 @@
 ﻿var LandingPageController = function ($scope) {
     $scope.models = {
-        nameLabel : 'Write Something:',
-        helloAngular: 'I work!'
+        nameLabel : 'WashCoat Info',
+        helloAngular: 'WashCoat Info'
     };
     $scope.navbarProperties = {
         isCollapsed: true
