@@ -23,7 +23,7 @@ namespace WashCoat.Web.Controllers
         [AllowAnonymous]
         public string GetWashCoatsData()
         {
-            var context = new Coater_LabEntities();
+            var context = new Coater_LabEntities1();
             var labData = context.LabData1.ToList();
 
             //Used to make property name as camel case
@@ -36,7 +36,7 @@ namespace WashCoat.Web.Controllers
         [AllowAnonymous]
         public bool DeleteWashCoatEntry([System.Web.Http.FromBody] int id)
         {
-            var context = new Coater_LabEntities();
+            var context = new Coater_LabEntities1();
             var deleteEntry = context.LabData1.Where(x => x.ID == id).FirstOrDefault();
             if(deleteEntry != null)
             {
@@ -51,9 +51,14 @@ namespace WashCoat.Web.Controllers
         {
             try
             {
-                var context = new Coater_LabEntities();
+                var context = new Coater_LabEntities1();
+
+                #region for temporary solution
+                var maxIdEntry = context.LabData1.OrderByDescending(i => i.ID).FirstOrDefault();
+                #endregion
                 var newEntry = new LabData1()
                 {
+                    ID = maxIdEntry.ID + 1, // for temporary solution
                     BatchID = labData1Model.BatchID,
                     LabLogNumber = labData1Model.LabLogNumber,
                     Solids500C = labData1Model.Solids500C,

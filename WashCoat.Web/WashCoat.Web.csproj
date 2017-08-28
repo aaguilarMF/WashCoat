@@ -214,23 +214,23 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="LabCoaterDB.Context.cs">
+    <Compile Include="LabCoaterDataBase.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>LabCoaterDB.Context.tt</DependentUpon>
+      <DependentUpon>LabCoaterDataBase.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="LabCoaterDB.cs">
+    <Compile Include="LabCoaterDataBase.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>LabCoaterDB.tt</DependentUpon>
+      <DependentUpon>LabCoaterDataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="LabCoaterDB.Designer.cs">
+    <Compile Include="LabCoaterDataBase.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>LabCoaterDB.edmx</DependentUpon>
+      <DependentUpon>LabCoaterDataBase.edmx</DependentUpon>
     </Compile>
     <Compile Include="LabData1.cs">
-      <DependentUpon>LabCoaterDB.tt</DependentUpon>
+      <DependentUpon>LabCoaterDataBase.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -238,6 +238,9 @@
     <Compile Include="Models\WashCoatViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="Tank.cs">
+      <DependentUpon>LabCoaterDataBase.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -253,15 +256,15 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="LabCoaterDB.Context.tt">
+    <Content Include="LabCoaterDataBase.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>LabCoaterDB.edmx</DependentUpon>
-      <LastGenOutput>LabCoaterDB.Context.cs</LastGenOutput>
+      <DependentUpon>LabCoaterDataBase.edmx</DependentUpon>
+      <LastGenOutput>LabCoaterDataBase.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="LabCoaterDB.tt">
+    <Content Include="LabCoaterDataBase.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>LabCoaterDB.edmx</DependentUpon>
-      <LastGenOutput>LabCoaterDB.cs</LastGenOutput>
+      <DependentUpon>LabCoaterDataBase.edmx</DependentUpon>
+      <LastGenOutput>LabCoaterDataBase.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
@@ -280,16 +283,10 @@
     <Content Include="Scripts\Controllers\AddWashCoatController.js" />
     <Content Include="Scripts\Controllers\RegisterController.js" />
     <Content Include="Scripts\Controllers\WashCoatController.js" />
+    <Content Include="Scripts\Directives\ConfirmClickDirective.js" />
     <Content Include="Scripts\Factories\AddWashCoatFactory.js" />
     <Content Include="Scripts\Factories\AuthHttpResponseInterceptor.js" />
     <Content Include="Scripts\Factories\LoginFactory.js" />
-    <EntityDeploy Include="LabCoaterDB.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>LabCoaterDB.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="LabCoaterDB.edmx.diagram">
-      <DependentUpon>LabCoaterDB.edmx</DependentUpon>
-    </Content>
     <Content Include="Content\ui-grid.woff" />
     <Content Include="Content\ui-grid.ttf" />
     <Content Include="Content\ui-grid.eot" />
@@ -301,6 +298,14 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <EntityDeploy Include="LabCoaterDataBase.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>LabCoaterDataBase.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="LabCoaterDataBase.edmx.diagram">
+      <DependentUpon>LabCoaterDataBase.edmx</DependentUpon>
+    </Content>
+    <None Include="Properties\PublishProfiles\WEB10.pubxml" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
     <Content Include="Scripts\Factories\WashCoatFactory.js" />
     <Content Include="Scripts\jquery-3.1.1.js" />
@@ -314,7 +319,9 @@
     <Content Include="Scripts\ui-grid.min.js" />
     <Content Include="Scripts\WashCoatWebApp.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>

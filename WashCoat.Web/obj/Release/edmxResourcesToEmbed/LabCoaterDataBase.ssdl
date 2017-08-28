@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Coater_LabModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="LabData1">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="BatchID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="LabLogNumber" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Solids500C" Type="float" Nullable="false" />
+    <Property Name="Pt" Type="float" Nullable="false" />
+    <Property Name="Pd" Type="float" Nullable="false" />
+    <Property Name="Rh" Type="float" Nullable="false" />
+    <Property Name="Zr" Type="float" Nullable="false" />
+    <Property Name="Ce" Type="float" Nullable="false" />
+    <Property Name="Ni" Type="float" Nullable="false" />
+    <Property Name="Ba" Type="float" Nullable="false" />
+    <Property Name="La" Type="float" Nullable="false" />
+    <Property Name="Ir" Type="float" Nullable="false" />
+    <Property Name="pH" Type="float" Nullable="false" />
+    <Property Name="Y" Type="float" Nullable="false" />
+    <Property Name="Nd" Type="float" Nullable="false" />
+    <Property Name="Pr" Type="float" Nullable="false" />
+    <Property Name="Hf" Type="float" Nullable="false" />
+    <Property Name="Temperature" Type="float" Nullable="false" />
+    <Property Name="Viscosity_Fresh" Type="float" Nullable="false" />
+    <Property Name="Viscosity_Aged" Type="float" Nullable="false" />
+    <Property Name="Arizona_Solids" Type="float" Nullable="false" />
+    <Property Name="WashCoatLoading" Type="float" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Coater_Lab.dbo.Tanks' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Tanks">
+    <Key>
+      <PropertyRef Name="TankID" />
+      <PropertyRef Name="LabDataID" />
+      <PropertyRef Name="LoopLine" />
+    </Key>
+    <Property Name="TankID" Type="int" Nullable="false" />
+    <Property Name="LabDataID" Type="int" Nullable="false" />
+    <Property Name="LoopLine" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="Coater_LabModelStoreContainer">
+    <EntitySet Name="LabData1" EntityType="Self.LabData1" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tanks" EntityType="Self.Tanks" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Tanks].[TankID] AS [TankID], 
+    [Tanks].[LabDataID] AS [LabDataID], 
+    [Tanks].[LoopLine] AS [LoopLine]
+    FROM [dbo].[Tanks] AS [Tanks]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

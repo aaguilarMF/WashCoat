@@ -26,6 +26,7 @@ namespace WashCoat.Web
             .Include("~/Scripts/Models.js")
             .IncludeDirectory("~/Scripts/Controllers", "*.js")
             .IncludeDirectory("~/Scripts/Factories", "*.js")
+            .IncludeDirectory("~/Scripts/Directives", "*.js")
             .Include("~/Scripts/WashCoatWebApp.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/AngularStuff").Include(/*"~/Scripts/jquery-3.1.1.js",*/

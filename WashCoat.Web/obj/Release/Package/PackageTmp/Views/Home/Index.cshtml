@@ -1,0 +1,55 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<!DOCTYPE html>
+<html ng-app="WashCoatWebApp" ng-controller="LandingPageController">
+<head>
+    <title ng-bind="models.nameLabel"></title>
+</head>
+
+<body>
+    <h1>{{models.helloAngular}}</h1>
+
+    <ul>
+        <!--<li><a href="#!routeOne">Route One</a></li>
+        <li><a href="#!routeTwo/6">Route Two</a></li>
+        <li><a href="#!routeThree">Route Three</a></li>-->
+        <li><a href="#!washCoatDataView">Wash Coat Data</a></li>
+    </ul>
+    <!--<ul>
+        <li><a href="#!login">Login</a></li>
+        <li><a href="#!register">Register</a></li>
+    </ul>-->
+    <div class="gridStyle" ng-view></div>
+</body>
+</html>
+
+<script>
+</script>
+
+<!--
+<!DOCTYPE html>
+<html ng-app="helloAngular">
+<head>
+    <title ng-bind="name"></title>
+</head>
+<body ng-controller="main">
+    <form >
+        <label >{{nameLabel}}</label>
+        <input type="text" ng-model="name"  />
+    </form>
+
+    <h1>{{name}}</h1>
+</body>
+</html>
+
+<script>
+    angular.module('helloAngular', []).controller(
+        'main', function ($scope) {
+            $scope.nameLabel = 'Name:';
+            $scope.name = '';
+        }
+        );
+</script>
+-->

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Connection String used in web.config by the application to access the database." defaultValue="Data Source=(LocalDb)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\aspnet-WashCoat.Web-20170822115727.mdf;Initial Catalog=aspnet-WashCoat.Web-20170822115727;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\aaguilar\\Documents\\Visual\ Studio\ 2015\\Projects\\WashCoat\.Web\\WashCoat\.Web\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+  <parameter name="Coater_LabEntities-Web.config Connection String" description="Coater_LabEntities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/LabCoaterDB.csdl|res://*/LabCoaterDB.ssdl|res://*/LabCoaterDB.msl;provider=System.Data.SqlClient;provider connection string=&quot;          data source=10.4.4.224\SQLEXPRESS;initial catalog=Coater_Lab;          user id= skulkarni; password = Suvie123;          integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\aaguilar\\Documents\\Visual\ Studio\ 2015\\Projects\\WashCoat\.Web\\WashCoat\.Web\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='Coater_LabEntities']/@connectionString" />
+  </parameter>
+  <parameter name="Coater_LabEntities1-Web.config Connection String" description="Coater_LabEntities1 Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/LabCoaterDataBase.csdl|res://*/LabCoaterDataBase.ssdl|res://*/LabCoaterDataBase.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=10.4.4.224\SQLEXPRESS;initial catalog=Coater_Lab;persist security info=True;user id=skulkarni;password=Suvie123;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\aaguilar\\Documents\\Visual\ Studio\ 2015\\Projects\\WashCoat\.Web\\WashCoat\.Web\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='Coater_LabEntities1']/@connectionString" />
+  </parameter>
+</parameters>
